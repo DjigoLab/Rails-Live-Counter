@@ -29,14 +29,17 @@ class RoomsController < ApplicationController
     else
       redirect_to @room
     end
-    @room.save!
-
-    ActionCable.server.broadcast "live_counter_channel", {
-        counter: RoomsController.render(
-            partial: 'counter',
-            locals: { room: @room }
-        ).squish
-    }
+    if @room.save!
+      ActionCable.server.broadcast "live_counter_channel", {
+          # counter: RoomsController.render(
+          #     partial: 'counter',
+          #     locals: {room: @room},
+          #     roomid: @room.id
+          # )
+          room_id: @room.id,
+          counter_value: @room.counter_value
+      }
+    end
   end
 
   def destroy

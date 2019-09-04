@@ -12,6 +12,11 @@ consumer.subscriptions.create("LiveCounterChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    document.getElementById('counter_value').textContent = data['counter'];
+    const counter = document.getElementById('counter_value');
+    const counterContainer = counter.parentNode.parentNode;
+
+    if ( parseInt( counterContainer.getAttribute( 'data-room-id' ) ) === data.room_id ){
+      counter.textContent = data['counter_value'];
+    }
   }
 });
