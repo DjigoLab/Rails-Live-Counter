@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://h:p16ab6bd8450b80eed70ac6e4fce1b71c7a4b22241d16b2eacddc7bd496a82cc1@ec2-3-248-67-117.eu-west-1.compute.amazonaws.com:23199" } %>
   channel_prefix: livecounter_production
