@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :show, only: [:sum_counter, :sub_counter ]
+
   def index
     @rooms = Room.all
   end
@@ -11,7 +13,6 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
   end
 
-
   def create
     @room = Room.new(room_params)
 
@@ -20,26 +21,16 @@ class RoomsController < ApplicationController
   end
 
 
-  def operate
-    @room = Room.find(params[:id])
-    if params[:operation] == 'sum'
-      @room.increment!(:counter_value)
-    elsif params[:operation] == 'sub'
-      @room.decrement!(:counter_value)
-    else
-      redirect_to @room
-    end
-    if @room.save!
-      ActionCable.server.broadcast "live_counter_channel", {
-          # counter: RoomsController.render(
-          #     partial: 'counter',
-          #     locals: {room: @room},
-          #     roomid: @room.id
-          # )
-          room_id: @room.id,
-          counter_value: @room.counter_value
-      }
-    end
+  def sum_counter
+    @room.increment!(:counter_value)
+    ActionCable.server.broadcast "live_counter_channel",
+     { room_id: @room.id, counter_value: @room.counter_value } if @room.save!
+  end
+
+  def sub_counter
+    @room.decrement!(:counter_value)
+    ActionCable.server.broadcast "live_counter_channel",
+    { room_id: @room.id, counter_value: @room.counter_value } if @room.save!
   end
 
   def destroy

@@ -1,14 +1,15 @@
-<div class="room_container" data-room-id="<%= @room.id %>"> 
+<div class="room_container" data-room-id="<%= @room.id %>">
   <p>
     <strong>Title:</strong>
     <%= @room.name %>
   </p>
   <p>
     <strong>Counter value:</strong>
-    <span id="counter_value" > <%= render partial: "counter", locals: {room: @room}  %> </span> 
+    <span id="counter_value" > <%= render partial: "counter", locals: {room: @room}  %> </span>
   </p>
-  <%= button_to 'Sum', operation_button_path, method: :get, params: {:operation => "sum"},  :remote=>true%>
-  <%= button_to 'Sub', operation_button_path, method: :get, params: {:operation => "sub"},  :remote=>true   %>
+
+  <%= button_to 'Sum', sum_button_path, method: :get,  :remote=>true %>
+  <%= button_to 'Sub', sub_button_path, method: :get, :remote=>true %>
 
   <td><%= link_to 'Home', rooms_path %></td>
 </div>
