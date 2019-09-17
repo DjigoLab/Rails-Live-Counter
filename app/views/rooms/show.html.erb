@@ -1,15 +1,22 @@
-<div class="room_container" data-room-id="<%= @room.id %>">
-  <p>
-    <strong>Title:</strong>
-    <%= @room.name %>
-  </p>
-  <p>
-    <strong>Counter value:</strong>
+<div class="room_container container" data-room-id="<%= @room.id %>">
+   <header>
+        <h2> <%= @room.name %></h2>
+  </header>
+
+
+  <div class="counter">
     <span id="counter_value" > <%= render partial: "counter", locals: {room: @room}  %> </span>
-  </p>
 
-  <%= button_to 'Sum', sum_button_path, method: :get,  :remote=>true %>
-  <%= button_to 'Sub', sub_button_path, method: :get, :remote=>true %>
+    <div class="buttons">
+      <%= button_to '', sum_button_path, method: :get,  :remote=>true, form_class: "plus-button"%>
+      <%= button_to '', sub_button_path, method: :get, :remote=>true, form_class: "minus-button"%>
+    </div>
+  </div>
 
-  <td><%= link_to 'Home', rooms_path %></td>
+    <footer class="footer-menu">
+        <ul class="menu">
+
+            <li class="home"><%= link_to 'Home', rooms_path %></li>
+        </ul>
+    </footer>
 </div>

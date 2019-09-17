@@ -1,0 +1,43 @@
+@import './colors';
+.room_container {
+    .counter {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        #counter_value {
+            font-size: 90px;
+            font-weight: 600;
+            margin-bottom: 60px;
+        }
+        .buttons {
+            font-family: 'Livvic', sans-serif;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-evenly;
+            form {
+                width: 111px;
+                height: 111px;
+                &.minus-button {
+                    input {
+                        background-image: image-url("minus-button.png");
+                    }
+                }
+                &.plus-button {
+                    input {
+                        background-image: image-url("plus-button.png");
+                    }
+                }
+                input {
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    background-position: center center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    border: none;
+                }
+            }
+        }
+    }
+}

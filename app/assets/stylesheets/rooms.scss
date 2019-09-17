@@ -1,3 +1,58 @@
 // Place all the styles related to the Rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Livvic:200,300,400,500,600|Roboto+Slab:100,400&display=swap');
+@import './room-selector';
+@import './colors';
+@import './footer';
+@import './header';
+* {
+    font-family: 'Livvic', sans-serif;
+    color: $color_1;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+body {
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.subheader {
+    font-size: 20px;
+}
+
+input {
+    font-size: 15px;
+}
+
+.caption {
+    font-size: 10px;
+}
+
+button {
+    font-size: 17px;
+}
+
+p {
+    font-size: 20px;
+}
