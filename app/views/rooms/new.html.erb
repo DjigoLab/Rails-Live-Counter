@@ -1,21 +1,36 @@
-<%= form_with scope: :room, url: rooms_path, local: true do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
+<div id="room-creator" class="container">
 
-  <p>
-    <%= form.label :max_counter %><br>
-    <%= form.number_field :max_counter, min:0  %>
-  </p>
+    <header>
+        <h2>Create your room</h2>
+    </header>
+
+    <div id="room-creator">
+      <%= form_with scope: :room, url: rooms_path, local: true do |form| %>
+          <p>
+              <%= form.label :name %><br>
+                  <%= form.text_field :name %>
+          </p>
+          <p>
+
+              <%= form.label :max_counter %><br>
+              <%= form.number_field :max_counter, min:0  %>
+          </p>
+          <p class="accepts-negatives">
+              <%= form.label 'Accepts negative numbers' %><br>
+              <%= form.check_box :accepts_negative  %>
+          </p>
+          <p class="create-button">
+              <%= form.submit %>
+          </p>
+          <% end %>
+      </div>
+
+            <footer class="footer-menu">
+                <ul class="menu">
+                    <li class="home"><%= link_to 'Home', rooms_path %></li>
+                </ul>
+            </footer>
+</div>
 
 
-    <p>
-    <%= form.label 'Accepts negative numbers' %><br>
-    <%= form.check_box :accepts_negative  %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+</div>
