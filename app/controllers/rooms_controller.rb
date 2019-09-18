@@ -28,7 +28,7 @@ class RoomsController < ApplicationController
   end
 
   def sub_counter
-    @room.decrement!(:counter_value)
+    @room.decrement!(:counter_value) if @room.counter_value > 0
     ActionCable.server.broadcast "live_counter_channel",
     { room_id: @room.id, counter_value: @room.counter_value } if @room.save!
   end
