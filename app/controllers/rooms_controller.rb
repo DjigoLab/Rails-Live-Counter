@@ -22,17 +22,14 @@ class RoomsController < ApplicationController
 
 
   def sum_counter
-    @room.increment(:counter_value)
+    @room.increment(:counter_value) unless @room.counter_value == @room.max_counter
     ActionCable.server.broadcast "live_counter_channel",
      { room_id: @room.id, counter_value: @room.counter_value } if @room.save!
   end
 
   def sub_counter
 
-    unless @room.counter_value == 0 && !@room.accepts_negative
-      @room.decrement(:counter_value)
-    end
-
+    @room.decrement(:counter_value) unless @room.counter_value == 0 && !@room.accepts_negative
     ActionCable.server.broadcast "live_counter_channel",
     { room_id: @room.id, counter_value: @room.counter_value } if @room.save!
   end

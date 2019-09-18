@@ -5,6 +5,10 @@
   </p>
 
   <p>
+    <%= form.label :max_counter %><br>
+    <%= form.number_field :max_counter, min:0  %>
+  </p>
+  <p>
     <%= form.submit %>
   </p>
 <% end %>
