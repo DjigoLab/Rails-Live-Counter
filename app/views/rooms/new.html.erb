@@ -8,6 +8,13 @@
     <%= form.label :max_counter %><br>
     <%= form.number_field :max_counter, min:0  %>
   </p>
+
+
+    <p>
+    <%= form.label 'Accepts negative numbers' %><br>
+    <%= form.check_box :accepts_negative  %>
+  </p>
+
   <p>
     <%= form.submit %>
   </p>
