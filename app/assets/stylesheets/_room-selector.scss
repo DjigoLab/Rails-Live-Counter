@@ -2,6 +2,13 @@
 #index-wrapper {
     .room-list {
         padding-left: 42px;
+        max-height: 50vh;
+        overflow: auto;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+        &::-webkit-scrollbar {
+            width: 0 !important
+        }
         .room {
             display: flex;
             justify-content: space-between;
