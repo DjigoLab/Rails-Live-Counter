@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'rooms#index'
+  root 'users#index'
   resources :rooms
   get '/rooms', to: 'rooms#index'
   get '/room/:id/sum', to: 'rooms#sum_counter', as: 'sum_button'
