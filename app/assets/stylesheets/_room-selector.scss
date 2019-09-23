@@ -24,9 +24,12 @@
             }
             .name {
                 font-size: 20px;
+                width: 100%;
                 a {
                     text-decoration: none;
                     color: $color_1;
+                    display: block;
+                    width: 100%
                 }
             }
             .users {
