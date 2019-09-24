@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis'
 gem 'redis-namespace'
 gem 'jquery-rails'
+gem 'serviceworker-rails'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
