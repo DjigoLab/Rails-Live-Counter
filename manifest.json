@@ -1,0 +1,12 @@
+{
+  "name": "LiveCounter",
+  "short_name": "LiveCounter",
+  "theme_color": "#ffffff",
+  "background_color": "#8775a2",
+  "display": "standalone",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": null,
+  "splash_pages": null
+}
