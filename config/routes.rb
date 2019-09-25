@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :rooms
   get '/rooms', to: 'rooms#index'
+  get '/about', to: 'about#index', as: 'about_path'
   get '/room/:id/sum', to: 'rooms#sum_counter', as: 'sum_button'
   get '/room/:id/sub', to: 'rooms#sub_counter', as: 'sub_button'
 
