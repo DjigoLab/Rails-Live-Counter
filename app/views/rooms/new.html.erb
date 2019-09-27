@@ -7,13 +7,13 @@
     <div id="room-creator">
       <%= form_with scope: :room, url: rooms_path, local: true do |form| %>
           <p>
-              <%= form.label :name %><br>
-                  <%= form.text_field :name %>
+              <%= form.label 'Room name' %><br>
+                  <%= form.text_field :name, placeholder: "Room name here" %>
           </p>
           <p>
 
-              <%= form.label :max_counter %><br>
-              <%= form.number_field :max_counter, min:0  %>
+              <%= form.label 'Max number' %><br>
+              <%= form.number_field :max_counter, min:0,  placeholder: "Counter max value here"   %>
           </p>
           <p class="accepts-negatives">
               <%= form.label 'Accepts negative numbers' %><br>

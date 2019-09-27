@@ -23,13 +23,14 @@ body {
 }
 
 .container {
-    height: 100%;
     display: flex;
     flex-flow: column;
 }
 
 body {
     margin: 0;
+    display: flex;
+    flex-flow: column;
 }
 
 h1 {

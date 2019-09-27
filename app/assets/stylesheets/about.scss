@@ -1,3 +1,48 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import './colors';
+#about-wrapper {
+    max-width: 550px;
+    margin: auto;
+    padding: 0 34px;
+    .creator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .face {
+            img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        .content {
+            margin: 0 15px;
+            text-align: center;
+            h2 {
+                color: $color_1;
+                font-weight: 400;
+                font-size: 17px;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 100;
+                max-width: 180px;
+            }
+            .social-links {
+                padding: 0;
+                display: flex;
+                justify-content: space-evenly;
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    font-size: 12px;
+                    font-weight: 100;
+                }
+            }
+        }
+        &:first-child {
+            margin-bottom: 3em;
+        }
+    }
+}

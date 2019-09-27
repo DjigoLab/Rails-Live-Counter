@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import './colors';
 #login-wrapper {
+    height: 100%;
     .user-login {
-        background: linear-gradient(135deg, $color_2 0%, $color_1 100%);
+        background: linear-gradient(135deg, $color_1 0%, $color_2 100%);
         box-shadow: 0px 0px 40px #00000080;
         border-radius: 0px 0px 175px;
         height: 100%;
@@ -47,6 +48,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        a {
+            text-decoration: none;
+        }
         p {
             margin: 0;
             text-align: center;
