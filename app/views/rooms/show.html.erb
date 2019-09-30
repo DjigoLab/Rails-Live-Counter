@@ -10,9 +10,9 @@
   <div class="counter">
     <span id="counter_value" > <%= render partial: "counter", locals: {room: @room}  %> </span>
     <div class="buttons">
-      <%= button_to '', sum_button_path, method: :get,  :remote=>true, form_class: "plus-button"%>
       <%= button_to '', sub_button_path, method: :get, :remote=>true, form_class: "minus-button"%>
+      <%= button_to '', sum_button_path, method: :get,  :remote=>true, form_class: "plus-button"%>
     </div>
   </div>
 </div>
-<%= render 'common/footer' %>
+<%= render 'common/footer', back_to: true, add_room: false %>
