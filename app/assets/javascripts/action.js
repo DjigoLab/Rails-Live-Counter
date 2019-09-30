@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     $(".accepts-negatives").click(function() {
         !$('#room_accepts_negative').prop('checked') ?
             $('#room_accepts_negative').prop('checked', true) :
