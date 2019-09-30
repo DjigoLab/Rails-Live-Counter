@@ -25,6 +25,7 @@ class RoomsController < ApplicationController
     @room.increment(:counter_value) unless @room.counter_value == @room.max_counter
     ActionCable.server.broadcast "live_counter_channel",
      { room_id: @room.id, counter_value: @room.counter_value, max_counter: @room.max_counter } if @room.save!
+
   end
 
   def sub_counter

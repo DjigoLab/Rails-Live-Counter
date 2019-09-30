@@ -2,7 +2,6 @@
 
 <%= render 'common/header', header_title: "Create your room", with_searchbar: false %>
 <div id="room-creator" class="container">
-    <div id="room-creator">
       <%= form_with scope: :room, url: rooms_path, local: true do |form| %>
           <p>
               <%= form.label 'Room name' %><br>
@@ -21,9 +20,6 @@
               <%= form.submit %>
           </p>
           <% end %>
-      </div>
+</div>
 <%= render 'common/footer' %>
-</div>
 
-
-</div>
