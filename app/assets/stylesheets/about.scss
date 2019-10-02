@@ -5,19 +5,22 @@
 #about-wrapper {
     max-width: 550px;
     margin: auto;
-    padding: 0 34px;
     .creator {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
         align-items: center;
+        margin: 0 10px 0 10px;
         .face {
+            display: flex;
+            justify-content: center;
+            max-width: 120px;
             img {
-                width: 90px;
-                height: 90px;
+                width: 100%;
+                max-width: 100%;
+                height: auto
             }
         }
         .content {
-            margin: 0 15px;
+            margin: 0 16px;
             text-align: center;
             h2 {
                 color: $color_1;
@@ -32,17 +35,30 @@
             .social-links {
                 padding: 0;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-evenly;
                 list-style: none;
-                a {
-                    text-decoration: none;
-                    font-size: 12px;
-                    font-weight: 100;
+                li {
+                    margin: 0 6px;
+                    a {
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-weight: 100;
+                        img {
+                            width: 10px;
+                            height: auto;
+                            max-width: 100%;
+                        }
+                    }
                 }
             }
         }
-        &:first-child {
-            margin-bottom: 3em;
+        &.antonio {
+            grid-template-columns: 120px 1fr;
+            margin-bottom: 47px;
+        }
+        &.marta {
+            grid-template-columns: 1fr 120px;
         }
     }
 }

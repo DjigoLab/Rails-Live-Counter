@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import './colors';
 #login-wrapper {
+    padding: 0;
     .user-login {
         background: linear-gradient(135deg, $color_1 0%, $color_2 100%);
         box-shadow: 0px 0px 40px #00000080;

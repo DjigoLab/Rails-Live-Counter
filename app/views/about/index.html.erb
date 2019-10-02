@@ -8,14 +8,22 @@
 
     <div class="antonio creator">
         <div class="face">
-            <img src="" alt="">
+            <%= image_tag("tuno.png", :alt => "Antonio's memoji") %>
         </div>
         <aside class="content">
             <h2>Antonio Djigo</h2>
             <p>Web developer, loves beer, party and travelling</p>
             <ul class="social-links">
-                <li class="instagram"><a href="#"><i>ig </i>@djigo.io</a></li>
-                <li class="twitter"><a href="#"><i>tw </i>@brownio_</a></li>
+                <li class="instagram">
+                    <a href="#">
+                        <%= image_tag("instagram-xs.png", :alt => "Instagram icon") %> @djigo.io
+                    </a>
+                </li>
+                <li class="twitter">
+                    <a href="#">
+                        <%= image_tag("twitter-xs.png", :alt => "Twitter icon") %> @brownio_
+                    </a>
+                </li>
             </ul>
         </aside>
     </div>
@@ -25,20 +33,23 @@
            <h2>Marta Hollingsworth</h2>
             <p>UX/UI Designer, loves music, beer and sunsets</p>
             <ul class="social-links">
-                <li class="instagram"><a href="#"><i>ig </i>@mholl_</a></li>
-                <li class="twitter"><a href="#"><i>tw </i>@ealyn_</a></li>
+                <li class="instagram">
+                    <a href="#">
+                        <%= image_tag("instagram-xs.png", :alt => "Instagram icon") %> @mholl_
+                    </a>
+                </li>
+                <li class="twitter">
+                    <a href="#">
+                        <%= image_tag("twitter-xs.png", :alt => "Twitter icon") %> @ealyn_
+                    </a>
+                </li>
             </ul>
         </aside>
              <div class="face">
-            <img src="" alt="">
+            <%= image_tag("morta.png", :alt => "Marta's memoji") %>
         </div>
 
     </div>
 </div>
-    <footer class="footer-menu">
-        <ul class="menu">
-            <li class="home">
-                <%= link_to 'Home', root_path %>
-            </li>
-        </ul>
-    </footer>
+
+<%= render 'common/footer', back_to: false, add_room: false %>
