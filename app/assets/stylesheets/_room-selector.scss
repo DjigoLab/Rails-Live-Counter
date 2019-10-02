@@ -1,10 +1,10 @@
 @import './colors';
 #index-wrapper {
-    height: 100%;
     .room-list {
         padding-left: 42px;
-        max-height: 50vh;
         overflow: auto;
+        height: 100%;
+        margin-bottom: 0;
         -ms-overflow-style: none;
         overflow: -moz-scrollbars-none;
         &::-webkit-scrollbar {

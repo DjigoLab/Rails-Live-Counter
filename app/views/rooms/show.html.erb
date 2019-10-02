@@ -1,22 +1,18 @@
+<% provide(:title, @room.name) %>
+
+<header>
+    <div class="with-searchbox">
+        <h2><%= @room.name %></h2>
+    </div>
+</header>
+
 <div class="room_container container" data-room-id="<%= @room.id %>">
-   <header>
-        <h2> <%= @room.name %></h2>
-  </header>
-
-
   <div class="counter">
     <span id="counter_value" > <%= render partial: "counter", locals: {room: @room}  %> </span>
-
     <div class="buttons">
-      <%= button_to '', sum_button_path, method: :get,  :remote=>true, form_class: "plus-button"%>
       <%= button_to '', sub_button_path, method: :get, :remote=>true, form_class: "minus-button"%>
+      <%= button_to '', sum_button_path, method: :get,  :remote=>true, form_class: "plus-button"%>
     </div>
   </div>
-
-    <footer class="footer-menu">
-        <ul class="menu">
-
-            <li class="back"><%= link_to 'Back', rooms_path %></li>
-        </ul>
-    </footer>
 </div>
+<%= render 'common/footer', back_to: true, add_room: false %>

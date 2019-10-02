@@ -1,11 +1,7 @@
-<div id="index-wrapper" class="container">
-    <header>
-        <div class="with-searchbox">
-            <h2>Choose your room</h2>
-            <input type="text" name="searchbox" placeholder="Search a room name">
-        </div>
-    </header>
+<% provide(:title, "Room List") %>
 
+<%= render 'common/header', header_title: "Choose your room", with_searchbar: true %>
+<div id="index-wrapper" class="container">
     <ul class="room-list">
         <% @rooms.each do |room| %>
             <ol class="room">
@@ -19,18 +15,5 @@
             </ol>
             <% end %>
     </ul>
-
-    <td>
-    </td>
-
-    <footer class="footer-menu">
-        <ul class="menu">
-            <li>
-                <%= link_to 'Add room', new_room_path %>
-            </li>
-            <li class="home">
-                <%= link_to 'Home', root_path %>
-            </li>
-        </ul>
-    </footer>
 </div>
+<%= render 'common/footer', back_to: false, add_room: true %>

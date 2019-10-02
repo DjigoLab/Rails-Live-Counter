@@ -1,0 +1,11 @@
+<footer class="footer-menu">
+    <ul class="menu">
+    <% if back_to %>
+        <li class="back"><%= link_to 'Back', rooms_path %></li>
+    <% end %>
+    <% if add_room %>
+        <li><%= link_to 'Add room', new_room_path %></li>
+    <% end %>
+        <li class="home"><%= link_to 'Home', root_path %></li>
+    </ul>
+</footer>

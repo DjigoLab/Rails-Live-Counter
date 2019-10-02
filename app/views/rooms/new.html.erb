@@ -1,10 +1,7 @@
+<% provide(:title, "Create Room") %>
+
+<%= render 'common/header', header_title: "Create your room", with_searchbar: false %>
 <div id="room-creator" class="container">
-
-    <header>
-        <h2>Create your room</h2>
-    </header>
-
-    <div id="room-creator">
       <%= form_with scope: :room, url: rooms_path, local: true do |form| %>
           <p>
               <%= form.label 'Room name' %><br>
@@ -23,14 +20,6 @@
               <%= form.submit %>
           </p>
           <% end %>
-      </div>
-
-            <footer class="footer-menu">
-                <ul class="menu">
-                    <li class="back"><%= link_to 'Back', rooms_path %></li>
-                </ul>
-            </footer>
 </div>
+<%= render 'common/footer',  back_to: true, add_room: false %>
 
-
-</div>

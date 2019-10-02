@@ -1,5 +1,4 @@
 import consumer from "./consumer"
-
 consumer.subscriptions.create("LiveCounterChannel", {
     connected() {
         // Called when the subscription is ready for use on the server
