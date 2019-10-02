@@ -76,8 +76,6 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     erubi (1.8.0)
-    feathericon-rails (1.0.0)
-      rails (>= 4.0.0)
     ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
     globalid (0.4.2)
@@ -223,7 +221,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  feathericon-rails
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
