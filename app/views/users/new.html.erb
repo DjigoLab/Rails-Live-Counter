@@ -7,6 +7,7 @@
         <h1> Hello! </h1>
         <p> Before we can start counting... </p>
         <%= form_for @user do |f| %>
+            <%= render 'shared/user_error_messages' %>
             <%= f.text_field :name, placeholder: "Cool username here" %>
             <%= f.submit "Let's go!", class: "" %>
         <% end %>
