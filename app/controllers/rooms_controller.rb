@@ -16,8 +16,11 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
 
-    @room.save
+   if  @room.save
     redirect_to @room
+   else
+    render 'new'
+   end
   end
 
 
@@ -29,7 +32,6 @@ class RoomsController < ApplicationController
   end
 
   def sub_counter
-
     @room.decrement(:counter_value) unless @room.counter_value == 0 && !@room.accepts_negative
     ActionCable.server.broadcast "live_counter_channel",
     { room_id: @room.id, counter_value: @room.counter_value, max_counter: @room.max_counter  } if @room.save!

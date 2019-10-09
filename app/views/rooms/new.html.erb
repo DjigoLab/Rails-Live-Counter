@@ -3,12 +3,13 @@
 <%= render 'common/header', header_title: "Create your room", with_searchbar: false %>
 <div id="room-creator" class="container">
       <%= form_with scope: :room, url: rooms_path, local: true do |form| %>
+            <%= render 'shared/error_messages' %>
+
           <p>
               <%= form.label 'Room name' %><br>
-                  <%= form.text_field :name, placeholder: "Room name here" %>
+            <%= form.text_field :name, placeholder: "Room name here" %>
           </p>
           <p>
-
               <%= form.label 'Max number' %><br>
               <%= form.number_field :max_counter, min:0,  placeholder: "Counter max value here"   %>
           </p>
