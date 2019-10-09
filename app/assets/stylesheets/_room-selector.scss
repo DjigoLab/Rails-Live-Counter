@@ -44,11 +44,17 @@
                 p {
                     margin: 0;
                 }
-                img {
+                .user-img {
                     width: 25px;
                     height: auto;
                     max-width: 100%;
                     margin-left: 10px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        max-width: 25px;
+                        height: auto;
+                    }
                 }
             }
         }
