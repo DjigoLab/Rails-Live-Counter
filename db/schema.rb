@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_08_30_135734) do
   enable_extension "plpgsql"
 
   create_table "rooms", force: :cascade do |t|
-    t.string "name", default: "Boring Default Name"
+    t.string "name", default: "Boring Name"
     t.string "password", default: "empty"
     t.integer "max_counter", default: 100
     t.integer "counter_value", default: 0
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_08_30_135734) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "user"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
