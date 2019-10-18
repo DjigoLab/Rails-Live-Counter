@@ -82,3 +82,32 @@ button {
 p {
     font-size: 20px;
 }
+
+#error_explanation {
+    margin-bottom: 5px;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            color: $color_0;
+            font-size: 10px;
+        }
+    }
+}
+
+#room-creator {
+    #error_explanation {
+        margin-bottom: 30px;
+        .alert {
+            display: none
+        }
+        ul {
+            li {
+                list-style: none;
+                color: $color_1;
+                font-size: 10px;
+            }
+        }
+    }
+}
