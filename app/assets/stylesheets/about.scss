@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import './colors';
 #about-wrapper {
+    display: grid;
     max-width: 550px;
     margin: auto;
     .creator {
@@ -14,9 +15,9 @@
             justify-content: center;
             max-width: 120px;
             img {
-                width: 100%;
-                max-width: 120px;
-                height: auto
+                width: 120px;
+                max-width: 100%;
+                height: auto;
             }
         }
         .content {
