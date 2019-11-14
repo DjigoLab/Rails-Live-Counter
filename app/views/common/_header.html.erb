@@ -2,7 +2,7 @@
     <div class="with-searchbox">
         <h2><%= header_title %></h2>
         <% if with_searchbar %>
-            <input type="text" name="searchbox" placeholder="Search a room name">
+            <input type="text" name="searchbox" placeholder="<%= current_user.name %>">
         <% end %>
         <% if with_max %>
             <p class="max-value"> Max. <%= @room.max_counter%> </p>
