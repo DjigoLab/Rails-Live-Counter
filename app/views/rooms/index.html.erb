@@ -1,6 +1,6 @@
 <% provide(:title, "Room List") %>
 
-<%= render 'common/header', header_title: "Choose your room", with_searchbar: true %>
+<%= render 'common/header', header_title: "Choose your room", with_searchbar: true, with_max: false %>
 <div id="index-wrapper" class="container">
     <ul class="room-list">
         <% @rooms.each do |room| %>

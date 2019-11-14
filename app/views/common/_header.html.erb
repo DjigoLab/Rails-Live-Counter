@@ -4,5 +4,8 @@
         <% if with_searchbar %>
             <input type="text" name="searchbox" placeholder="Search a room name">
         <% end %>
+        <% if with_max %>
+            <p class="max-value"> Max. <%= @room.max_counter%> </p>
+        <% end %>
     </div>
 </header>
