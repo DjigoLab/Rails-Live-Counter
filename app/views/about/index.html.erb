@@ -1,4 +1,12 @@
 <header>
+ <ul class="back-and-name">
+            <li class="back">
+                <%= link_to root_path  do%>
+                    <%= image_tag("back.png", :alt => "Back icon") %>
+                <% end %>
+            </li>
+
+        </ul>
     <div class="with-searchbox">
         <h2>About us</h2>
     </div>
@@ -34,13 +42,13 @@
             <p>UX/UI Designer, loves music, beer and sunsets</p>
             <ul class="social-links">
                 <li class="instagram">
-                    <a href="http://instagram.com/_mholl">
-                        <%= image_tag("instagram-xs.png", :alt => "Instagram icon") %> @_mholl
+                    <a href="http://instagram.com/ux_holly">
+                        <%= image_tag("instagram-xs.png", :alt => "Instagram icon") %> @ux_holly
                     </a>
                 </li>
                 <li class="twitter">
-                    <a href="http://twitter.com/ealyn_">
-                        <%= image_tag("twitter-xs.png", :alt => "Twitter icon") %> @ealyn_
+                    <a href="http://twitter.com/ux_holly">
+                        <%= image_tag("twitter-xs.png", :alt => "Twitter icon") %> @ux_holly
                     </a>
                 </li>
             </ul>
@@ -52,4 +60,4 @@
     </div>
 </div>
 
-<%= render 'common/footer', back_to: false, add_room: false %>
+<%= render 'common/footer', back_to: false, add_room: false, show_users: false %>

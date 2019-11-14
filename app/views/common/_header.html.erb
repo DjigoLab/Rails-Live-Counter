@@ -1,4 +1,14 @@
 <header>
+        <ul class="back-and-name">
+            <li class="back">
+                <%= link_to rooms_path  do%>
+                    <%= image_tag("back.png", :alt => "Back icon") %>
+                <% end %>
+            </li>
+            <li class="username">
+                <%= current_user.name %>
+            </li>
+        </ul>
     <div class="with-searchbox">
         <h2><%= header_title %></h2>
         <% if with_searchbar %>

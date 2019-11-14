@@ -42,3 +42,43 @@
         }
     }
 }
+
+#users-list{
+    background-color: rgba(135, 133, 162, .9);
+    box-shadow: 0px 7px 20px #000000B3;
+    border-radius: 75px 75px 0px 0px;
+    opacity: 0.9;
+    display: grid;
+    align-items: center;
+    transform: translateY(150px);
+    transition: transform .4s ease-in-out;
+    &.show{
+    transform: translateY(0);
+
+    }
+    .draggable{
+        border-radius: 10px;
+        background-color: rgba(135, 133, 162,1);
+        width: 91px;
+        height: 7px;
+        margin-top: 10px;
+        justify-self: center;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        padding-top: 20px;
+        li{
+            color: $color_0;
+            text-align: center;
+            padding: 0 30px;
+            margin-bottom: 15px;
+            font-family: 'Livvic', sans-serif;
+
+        }
+    }
+
+}

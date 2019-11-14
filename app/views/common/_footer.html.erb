@@ -1,26 +1,17 @@
 <footer class="footer-menu">
-    <ul class="menu">
-
-    <% if back_to %>
-        <li class="back">
-        <%= link_to rooms_path  do%>
-                <%= image_tag("back.png", :alt => "Back icon") %>
-            <% end %>
-        </li>
-    <% end %>
 
     <% if add_room %>
-        <li>
+        <button>
         <%= link_to new_room_path  do%>
             <%= image_tag("add.png", :alt => "Add room icon") %>
         <% end %>
-        </li>
+        </button>
     <% end %>
 
-        <li class="home">
-        <%= link_to root_path  do%>
-            <%= image_tag("home.png", :alt => "Home icon") %>
-        <% end %>
-        </li>
-    </ul>
+        <% if show_users %>
+        <button id="show-list">
+            <%= image_tag("users.png", :alt => "Show users list") %>
+        </button>
+    <% end %>
+
 </footer>

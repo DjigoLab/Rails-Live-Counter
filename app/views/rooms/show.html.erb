@@ -12,4 +12,14 @@
     </div>
   </div>
 </div>
-<%= render 'common/footer', back_to: true, add_room: false %>
+<%= render 'common/footer', back_to: true, add_room: false, show_users: true %>
+
+<div id="users-list">
+  <div class="draggable"></div>
+  <ul>
+    <li><%= current_user.name %></li>
+    <li><%= current_user.name %></li>
+    <li><%= current_user.name %></li>
+    <li><%= current_user.name %></li>
+  </ul>
+</div>
