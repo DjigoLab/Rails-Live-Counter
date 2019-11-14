@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_08_30_135734) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "rooms", force: :cascade do |t|
+  create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name", default: "Boring Name"
     t.string "password", default: "empty"
     t.integer "max_counter", default: 100
@@ -25,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_08_30_135734) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
