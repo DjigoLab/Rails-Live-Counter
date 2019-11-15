@@ -1,0 +1,76 @@
+
+@import './colors';
+
+
+/* Customize the label (the checkbox-container) */
+.checkbox-container {
+    display: flex;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 2.4vh;
+    font-family: 'Roboto Slab', serif;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+  /* Hide the browser's default radio button */
+.checkbox-container  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+  /* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $color_0;
+    border: 1px solid;
+    border-color: $color_1;
+    border-radius: 50%;
+    &.create-room{
+        left: calc(100% - 32px);
+    }
+}
+
+  /* When the radio button is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: $color_1;
+}
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .checkbox-container .checkmark:after {
+    top: 4px;
+    left: 8px;
+    width: 6px;
+    height: 12px;
+
+    /*Add a white border on the bottom and left, creating that 'L' */
+    border: solid $color_0;
+    border-width: 0 2px 2px 0;
+
+    /*Rotate the L 45 degrees to turn it into a checkmark*/
+    transform: rotate(45deg);
+
+  }

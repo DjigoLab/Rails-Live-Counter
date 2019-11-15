@@ -13,10 +13,11 @@
               <%= form.label 'Max number' %><br>
               <%= form.number_field :max_counter, min:0,  placeholder: "Counter max value here"   %>
           </p>
-          <p class="accepts-negatives">
+          <div class="accepts-negatives checkbox-container">
               <%= form.label 'Accepts negative numbers' %><br>
               <%= form.check_box :accepts_negative  %>
-          </p>
+              <div class="checkmark create-room"></div>
+          </div>
           <p class="create-button">
               <%= form.submit %>
           </p>
