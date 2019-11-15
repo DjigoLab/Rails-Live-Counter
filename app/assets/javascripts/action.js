@@ -9,4 +9,8 @@ jQuery(document).ready(function ($) {
     $("#show-list").click(function () {
         $("#users-list").addClass('show')
     })
+
+    $("#users-list").find('.draggable').click(function () {
+        $("#users-list").removeClass('show')
+    })
 })

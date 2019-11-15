@@ -44,29 +44,34 @@
 }
 
 #users-list{
-    background-color: rgba(135, 133, 162, .9);
-    box-shadow: 0px 7px 20px #000000B3;
+    background: linear-gradient(160deg, $color_1 0%, $color_2 100%);
+    box-shadow: 0px -7px 20px #00000038;
     border-radius: 75px 75px 0px 0px;
-    opacity: 0.9;
+    height: 260px;
     display: grid;
     align-items: center;
-    transform: translateY(150px);
-    transition: transform .4s ease-in-out;
+    position: absolute;
+    bottom: -265px;
+    width: 100%;
+    transition: bottom .4s ease-in-out;
     &.show{
-    transform: translateY(0);
+        bottom: 0;
 
     }
     .draggable{
         border-radius: 10px;
-        background-color: rgba(135, 133, 162,1);
+        background-color: #FFFFFF4D;
         width: 91px;
         height: 7px;
         margin-top: 10px;
         justify-self: center;
     }
     ul{
+        height: 260px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25px;
+        grid-row-gap: 12px;
         justify-content: center;
         list-style: none;
         padding: 0;
@@ -75,7 +80,7 @@
             color: $color_0;
             text-align: center;
             padding: 0 30px;
-            margin-bottom: 15px;
+            font-size: 20px;
             font-family: 'Livvic', sans-serif;
 
         }
