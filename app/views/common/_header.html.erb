@@ -1,8 +1,14 @@
 <header>
         <ul class="back-and-name">
             <li class="back">
-                <%= link_to rooms_path  do%>
-                    <%= image_tag("back.png", :alt => "Back icon") %>
+                <% if request.env['PATH_INFO'] == rooms_path %>
+                    <%= link_to root_path  do%>
+                        <%= image_tag("back.png", :alt => "Back icon") %>
+                    <% end %>
+                <% else %>
+                    <%= link_to rooms_path  do%>
+                        <%= image_tag("back.png", :alt => "Back icon") %>
+                    <% end %>
                 <% end %>
             </li>
             <li class="username">
@@ -12,7 +18,7 @@
     <div class="with-searchbox">
         <h2><%= header_title %></h2>
         <% if with_searchbar %>
-            <input type="text" name="searchbox" placeholder="<%= current_user.name %>">
+            <input type="text" name="searchbox" placeholder="Search room here">
         <% end %>
         <% if with_max %>
             <p class="max-value"> Max. <%= @room.max_counter%> </p>

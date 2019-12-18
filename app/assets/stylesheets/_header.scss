@@ -1,13 +1,10 @@
 @import './colors';
 header {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
     background: $color_2;
     background: linear-gradient(135deg, $color_1 0%, $color_2 100%);
     box-shadow: 0px 0px 10px #0000004D;
     min-height: 188px;
+    padding-top: 25px;
 
     .max-value{
         color: $color_0;
@@ -40,7 +37,9 @@ header {
     flex-flow: column;
     input {
         margin: 0 auto;
+        margin-top: 20px;
         max-width: 230px;
+        padding-left: 5px;
     }
 }
 
@@ -51,5 +50,5 @@ h2 {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
     margin-bottom: 5px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
