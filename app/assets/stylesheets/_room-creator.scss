@@ -48,18 +48,16 @@
             &.create-button {
                 margin-bottom: 0;
                 input[type="submit"] {
-                    padding: 0;
-                    font-weight: bold;
+                    padding: 20px 10px;
+                    border-radius: 59px;                    font-weight: bold;
                     border: 1px solid $color_2;
                     background: $color_1;
                     color: $color_0;
-                    margin: 30px auto 0 auto;
+                    margin: 40px auto 0 auto;
                     max-width: 232px;
-                    height: 47px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 30px;
                 }
             }
         }

@@ -14,11 +14,11 @@ header {
         text-align: center;
         font-family: 'Roboto Slab', serif;
         margin: 0;
+        font-size: 14px;
     }
     .back-and-name{
         display: flex;
         justify-content: space-between;
-        align-items: center;
         list-style: none;
         margin: 0;
         width: 100%;
@@ -36,13 +36,20 @@ header {
 }
 
 .with-searchbox {
+    display: flex;
+    flex-flow: column;
     input {
-        margin: 0;
+        margin: 0 auto;
+        max-width: 230px;
     }
 }
 
 h2 {
+    font-size: 34px;
     text-align: center;
     color: $color_0;
+    font-family: 'Roboto Slab', serif;
     font-weight: 300;
+    margin-bottom: 5px;
+    margin-top: 30px;
 }
