@@ -17,7 +17,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 gem 'redis'
-gem 'mysql2'
+# Use sqlite3 as the database for Active Record
+# gem 'sqlite3', '~> 1.4'
+gem 'pg'
 gem 'redis-namespace'
 gem 'jquery-rails'
 gem 'serviceworker-rails'
